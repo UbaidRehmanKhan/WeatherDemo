@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight=".8"
+                android:background="@color/ColorBg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCurrentLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCity"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="71dp"
+                    android:layout_marginEnd="37dp"
+                    android:background="@color/ColorText"
+                    android:padding="5dp"
+                    android:text="@string/get_current_location"
+                    android:textColor="@color/Color_white" />
+                <TextView
+                    android:singleLine="true"
+                    android:id="@+id/tvCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvCenti"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="-75dp"
+                    android:text="@string/city"
+                    android:textColor="@color/ColorText"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tvDay"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tvCity"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="80sp"
+                    android:text="@string/day"
+                    android:textColor="@color/ColorText"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDay"
+                    android:layout_alignStart="@+id/tvCity"
+                    android:text="@string/sky"
+                    android:textColor="@color/ColorText"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvCenti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="182dp"
+                    android:layout_marginEnd="74dp"
+                    android:text="@string/degree"
+                    android:textColor="@color/ColorText"
+                    android:textSize="70sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="193dp"
+                    android:layout_marginEnd="46dp"
+                    android:text="@string/c"
+                    android:textColor="@color/ColorText"
+                    android:textSize="30dp" />
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="130dp"
+                    android:layout_alignStart="@+id/tvCity"
+                    android:layout_alignTop="@+id/tvCenti"
+                    android:layout_marginStart="-2dp"
+                    android:layout_marginTop="-28dp"
+                    android:src="@drawable/cloudy" />
+
+                <LinearLayout
+                    android:id="@+id/ll_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Pressure"
+                        android:textColor="@color/ColorText" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Humidity"
+                        android:textColor="@color/ColorText" />
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Speed"
+                        android:textColor="@color/ColorText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="55dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPressure"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="preesure"
+                        android:textColor="@color/ColorText" />
+
+                    <TextView
+                        android:id="@+id/tvHumidity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Humaidity"
+                        android:textColor="@color/ColorText" />
+
+                    <TextView
+                        android:id="@+id/tvSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Speed"
+                        android:textColor="@color/ColorText" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvWeather"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight=".2">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</layout>

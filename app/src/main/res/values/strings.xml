@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="mon">Mon</string>
+    <string name="c">℃</string>
+    <string name="city">city</string>
+    <string name="day">day</string>
+    <string name="sky">clear</string>
+    <string name="degree">0</string>
+    <string name="AppId">dc4801451a2a6f2a725721299c7c4e99</string>
+    <string name="get_current_location">Get Update Weather</string>
+    <string name="turnon_gps">Please turn on GPS from settings</string>
+</resources>
